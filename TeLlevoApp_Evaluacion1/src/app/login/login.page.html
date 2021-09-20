@@ -3,23 +3,31 @@
 </ion-header>
 
 <ion-content >
+
+  <!--Titulo nombre app-->
+  <div id="divTitulo">
+    <ion-title color="blanco" id="titulo">T&nbsp;E&nbsp;&nbsp;&nbsp;L&nbsp;L&nbsp;E&nbsp;V&nbsp;O</ion-title>
+    <ion-title color="blanco" id="subtitulo">A&nbsp;P&nbsp;P</ion-title>
+  </div>
   
-    <ion-title>TE LLEVO APP</ion-title>
-  
+  <!--Inputs iniciar sesion-->
   <ion-card>
     <form>
-      <!--Input iniciar sesion-->
-      <ion-item >
+      <!--Input usuario-->
+      <ion-item color="blanco">
         <ion-label position="stacked">Ingresar Usuario</ion-label>
-        <ion-input type="text" #username ></ion-input>
+        <ion-input color="gris" type="text" #username ></ion-input>
       </ion-item>
       <!--Input contraseña-->
-      <ion-item>
+      <ion-item color="blanco">
         <ion-label position="stacked">Ingresar Contraseña</ion-label>
-        <ion-input type="password" #password></ion-input>
+        <ion-input color="gris" type="password" #password></ion-input>
       </ion-item>
-      <!--boton ingresar sesion-->
-      <ion-button shape="round" (click)="login()">INGRESAR SESIÓN</ion-button>
     </form>
   </ion-card>
+  <!--boton ingresar sesion-->
+  <ion-button color="gris" (click)="login()">Iniciar sesión</ion-button>
+  <div id="linkRestablecer">
+    <ion-label position="stacked">Restablecer contraseña</ion-label>
+  </div>
 </ion-content>
