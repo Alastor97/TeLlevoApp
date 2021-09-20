@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestablecerPage implements OnInit {
 
-  constructor() { }
+  constructor(){}
 
   ngOnInit() {
   }
