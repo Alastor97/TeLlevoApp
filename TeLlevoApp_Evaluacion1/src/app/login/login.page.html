@@ -11,15 +11,15 @@
       <!--Input iniciar sesion-->
       <ion-item >
         <ion-label position="stacked">Ingresar Usuario</ion-label>
-        <ion-input ></ion-input>
+        <ion-input type="text" #username ></ion-input>
       </ion-item>
       <!--Input contraseña-->
       <ion-item>
         <ion-label position="stacked">Ingresar Contraseña</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password" #password></ion-input>
       </ion-item>
       <!--boton ingresar sesion-->
-      <ion-button shape="round">INGRESAR SESIÓN</ion-button>
+      <ion-button shape="round" (click)="login()">INGRESAR SESIÓN</ion-button>
     </form>
   </ion-card>
 </ion-content>
