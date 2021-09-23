@@ -43,12 +43,21 @@ ion-label {
     font-weight: bold;
 }
 
-ion-button {
+#button-restablecer{
     background-color: var(--ion-color-gris);
     height: 5%;
     width: 80%;
     margin-left: 10%;
     border-radius: 2px;
 
+    font-weight: bold;
+}
+
+#iniciar {
+    width: 80%;
+    margin-left: 10%;
+    
+    font-size: smaller;
+    color: white;
     font-weight: bold;
 }
