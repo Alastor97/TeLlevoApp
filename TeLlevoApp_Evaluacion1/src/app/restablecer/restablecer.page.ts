@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-restablecer',
@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./restablecer.page.scss'],
 })
 export class RestablecerPage implements OnInit {
-
+    // rescato desde el html el input #username
+    @ViewChild ('username') user;
+    // rescato desde el html el input #password
+    @ViewChild ('password1') password1;
+    // rescato desde el html el input #password
+    @ViewChild ('password2') password2;
   constructor(){}
 
   ngOnInit() {
