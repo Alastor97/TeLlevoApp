@@ -31,7 +31,7 @@
     </form>
   </ion-card>
   <!--Boton restablecer contraseña-->
-  <ion-button id="button-restablecer" color="gris" [routerLink]="['../login']">Restablecer Contraseña</ion-button>
+  <ion-button id="button-restablecer" color="gris" (click)="restablecer()">Restablecer Contraseña</ion-button>
   <ion-button id="iniciar" color="gris" fill="clear" [routerLink]="['../login']">Volver al Iniciar Sesión</ion-button>
   
 </ion-content>
