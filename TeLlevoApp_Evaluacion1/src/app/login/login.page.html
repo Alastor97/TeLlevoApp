@@ -25,9 +25,9 @@
       </ion-item>
     </form>
   </ion-card>
-  <!--boton ingresar sesion-->
-  <ion-button color="gris" (click)="login()">Iniciar sesión</ion-button>
-  <div id="linkRestablecer">
-    <ion-label position="stacked">Restablecer contraseña</ion-label>
-  </div>
+  <!--Boton ingresar sesion-->
+  <ion-button id="iniciarSesion" color="gris" (click)="login()" [routerLink]="['../perfil-user']">Iniciar sesión</ion-button>
+  <!--Boton restablecer contraseña-->
+  <ion-button id="restablecerPassword" color="gris" fill="clear" [routerLink]="['../restablecer']">Restablecer contraseña</ion-button>
+  
 </ion-content>
