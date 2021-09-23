@@ -1,8 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { TouchSequence } from 'selenium-webdriver';
-import { environment } from 'src/environments/environment';
-
 
 
 @Component({
