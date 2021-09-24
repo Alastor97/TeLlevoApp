@@ -1,40 +1,45 @@
 <ion-header>
-  <ion-toolbar color="tertiary" >
+  <ion-toolbar color="negro" id="titulo">
     <ion-title>Perfil</ion-title>
-    
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item class="photo-perfil" color="primary">
-    <ion-card >
-      <img class="img-perfil" src="../../assets/img/img-icon.perfil.jpg" alt="">
-    </ion-card>
-    
-  </ion-item>
-  <ion-item class="datos-user" color="primary">
-    <p>Bienvenido {{usuario}} </p>
-  </ion-item>
 
   
+    <ion-card class="photo-perfil" color="negro">
+      <img class="img-perfil" src="../../assets/img/jose.png" alt="">
+    </ion-card>
+    
+
+
+  <div id="bienvenida">
+    <p>Bienvenido {{usuario}} </p>
+  </div> 
 
   <!--Menu izquierdo-->
 
   
   <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
     <ion-header>
-      <ion-toolbar color="tertiary">
+      <ion-toolbar color="negro" id="toolbar">
         <ion-title>Menú</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-item > <ion-button class="menu-perfil" >Viajes</ion-button> </ion-item>
+        <ion-item >
+          <ion-button color="negro" class="menu-perfil">Viajes<ion-icon name="car"></ion-icon></ion-button>
+        </ion-item>
+        <ion-item >
+          <ion-button color="negro" class="menu-perfil">Opciones<ion-icon name="settings"></ion-icon></ion-button>
+        </ion-item>
+        <ion-item >
+          <ion-button color="negro" class="menu-perfil" (click)=CerrarSesion()>Cerrar Sesion<ion-icon name="log-in"></ion-icon></ion-button>
+        </ion-item>
         
-          <ion-item > <ion-button class="menu-perfil" (click)=CerrarSesion()>Cerrar Sesion</ion-button> </ion-item>
         
         
-         
       </ion-list>
     </ion-content>
   </ion-menu>

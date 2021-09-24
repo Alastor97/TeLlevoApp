@@ -59,7 +59,7 @@ export class RestablecerPage implements OnInit {
   }
 
   restablecer(){
-    
+
     if(this.user.value == '' || this.password1.value == ''|| this.password2.value == ''){
 
       this.datosEnBlanco();
@@ -80,9 +80,7 @@ export class RestablecerPage implements OnInit {
           pass: true
         }
       });
-
     }
-
   }
 
   ngOnInit() {

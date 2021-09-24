@@ -24,8 +24,4 @@ export class PerfilUserPage implements OnInit {
     
   }
 
-
-  
-  
-
 }

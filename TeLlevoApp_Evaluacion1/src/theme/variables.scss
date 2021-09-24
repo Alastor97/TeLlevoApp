@@ -90,6 +90,15 @@
   --ion-color-new-contrast-rgb: 0,0,0;
   --ion-color-new-shade: #e0e0e0;
   --ion-color-new-tint: #ffffff;
+
+
+  /** negro **/
+  --ion-color-negro: #000000;
+  --ion-color-negro-rgb: 0,0,0;
+  --ion-color-negro-contrast: #ffffff;
+  --ion-color-negro-contrast-rgb: 255,255,255;
+  --ion-color-negro-shade: #000000;
+  --ion-color-negro-tint: #1a1a1a;
 }
 
 @media (prefers-color-scheme: light) {
