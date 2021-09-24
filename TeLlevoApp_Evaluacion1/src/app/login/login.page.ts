@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 import { TouchSequence } from 'selenium-webdriver';
 
@@ -29,7 +30,7 @@ export class LoginPage implements OnInit {
   };
   
 
-  constructor(private router: Router, private route: ActivatedRoute) {
+  constructor(private router: Router, private route: ActivatedRoute, public alertController: AlertController) {
     
     this.route.queryParams.subscribe(data => {
       this.nuevaPass = data.pass
@@ -40,20 +41,40 @@ export class LoginPage implements OnInit {
       this.nuevaPass = false;
       //console.log("this.data.password");
     } 
-     
-    
-    
-
   }
 
+  async datosIncorrectos(){
+
+    const alert = await this.alertController.create({
+      header: 'ERROR',
+      message: 'Los datos ingresados son incorrectos',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+  }
+
+  async datosEnBlanco(){
+
+    const alert = await this.alertController.create({
+      header: 'ERROR',
+      message: 'Algunos datos están en blanco',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+  }
   
   login(){
-   
     if(this.user.value==this.data.user && (this.password.value==this.data.password || this.passNueva==this.password.value)){
       // ingreso de usuario y pasar parametros de usuario
       this.router.navigate(['../perfil-user'],{queryParams:{
         usuario:this.user.value
       }});
+    }else if(this.user.value == '' || this.password.value == ''){
+      this.datosEnBlanco();
+    } else {
+      this.datosIncorrectos();
     }
     console.log(this.nuevaPass)
     console.log(this.passNueva);
