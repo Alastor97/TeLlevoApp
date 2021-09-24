@@ -24,26 +24,32 @@ export class LoginPage implements OnInit {
   ]*/
   
   data: any = {
-    user: 'juancarlos0000',
+    user: 'juancarlos00',
     password: '123456'
   };
   
 
   constructor(private router: Router, private route: ActivatedRoute) {
+    
     this.route.queryParams.subscribe(data => {
       this.nuevaPass = data.pass
       this.passNueva = String(data.password)
     });
-
-    if(this.nuevaPass == true){
-      this.data.find(d => d.user=='juancarlos0000').password = this.passNueva;
-    }
+    if(this.nuevaPass){
+      this.data.password = this.passNueva;
+      this.nuevaPass = false;
+      //console.log("this.data.password");
+    } 
+     
+    
+    
 
   }
 
   
   login(){
-    if(this.user.value==this.data.user && this.password.value==this.data.password){
+   
+    if(this.user.value==this.data.user && (this.password.value==this.data.password || this.passNueva==this.password.value)){
       // ingreso de usuario y pasar parametros de usuario
       this.router.navigate(['../perfil-user'],{queryParams:{
         usuario:this.user.value
@@ -55,6 +61,7 @@ export class LoginPage implements OnInit {
   }
   
   restablecer() {
+    
     this.router.navigate(['../restablecer'],{
       queryParams:{
         usuario: this.data.user,
